@@ -1,84 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
 :root {
-  --body-background: #f2f2f2;
-  --body-color: #444;
-  --heading-color: black;
-  --action-color: #d64045;
+  --blue-light: hsl(240, 50%, 96%); 
+  --blue: hsl(240, 24%, 35%);
+  --blue-dark: hsl(240, 35%, 21%);
+  --red-light: hsl(335, 60%, 96%);
+  --red: hsl(335, 42%, 58%);
+  --red-dark: hsl(335, 56%, 23%);
+  --cool-light: hsl(240, 12%, 92%);
+  --cool: hsl(240, 7%, 35%);
+  --cool-dark: hsl(240, 11%, 18%);
+
+  --serif: 'Libre Baskerville', serif;
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background: var(--body-background);
-  color: var(--body-color);
-  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    "Helvetica", "Arial", sans-serif;
-  margin: 0 8px;
-  font-size: 108%;
+  background-color: var(--cool-light);
+  color: var(--cool-dark);
+  font-family: var(--serif);
+  font-size: 1rem;
   line-height: 1.5;
 }
 
 a {
-  color: var(--action-color);
-  text-decoration: underline;
-  text-decoration-color: #ffb088;
-}
-
-h1 {
-  margin: 1rem 0 3rem;
-  text-align: center;
-  font-weight: 900;
-  font-size: 2.5rem;
-  color: var(--heading-color);
-  line-height: 1.2;
-}
-
-body > header {
-  margin: 1rem;
-  text-align: center;
-}
-
-body > header img {
-  display: inline-block;
-  width: 400px;
-  max-width: 100%;
-}
-
-body > nav ul {
-  margin: 2rem 0;
-  padding: 0;
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  font-size: 1.3rem;
-  font-weight: bold;
-}
-
-body > nav a {
+  color: var(--red);
+  font-weight: 700;
   text-decoration: none;
 }
 
-main {
-  margin: 2rem auto 4rem;
-  max-width: 65rem;
-  min-height: calc(100vh - 200px);
-  padding: 25px 25px 50px;
-  background: white;
-  box-shadow: 2px 3px 3px #ddd;
-  border-radius: 3px;
-
-  @media (max-width: 500px) {
-    padding: 16px 16px 50px;
-  }
+a:hover {
+  color: var(--red-dark);
 }
 
-footer {
-  text-align: center;
-  margin-bottom: 4rem;
-  font-size: 1em;
+
+h1, h2, h3 {
+  color: var(--blue);
 }
 
-hr {
-  border: none;
-  border-top: 2px dotted #bbb;
-  margin: 3rem 0;
+h1 {
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+ul {
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: .5rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+pre {
+  margin-bottom: 1.5rem;
+}
+
+img {
+  width: 100%;
+}
+
+.site-header {
+  border-top: .25rem var(--red) solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.antonios-face {
+  width: 100%;
+  max-width: 150px;
+  padding: 1rem;
+}
+
+.site-navbar {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.site-footer {
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.home-content {
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.home-foods {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: .5rem solid var(--red);
+  border-bottom: .5rem solid var(--red);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.home-foods > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.page-content {
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.page-header {
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.post-header {
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.post-content {
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.the-404-content {
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.the-404-header {
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 1rem;
 }

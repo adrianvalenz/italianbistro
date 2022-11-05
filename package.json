@@ -14,5 +14,6 @@
     "postcss-import": "^14.1.0",
     "postcss-load-config": "^4.0.1",
     "postcss-preset-env": "^7.4.3"
-  }
+  },
+  "dependencies": {}
 }
