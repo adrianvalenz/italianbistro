@@ -32,3 +32,10 @@ template_engine: liquid
 # timezone: America/Los_Angeles
 # pagination:
 #   enabled: true
+
+
+# Prismic config:
+prismic_repository: italianbistro.prismic.io
+autoload_paths:
+  - path: models
+    eager: true

@@ -4,6 +4,11 @@
     {% render "head", metadata: site.metadata, title: data.title %}
   </head>
   <body class="{{ data.layout }} {{ data.page_class }}">
+    {% if site.prismic_preview_token %}
+      <p class="text-center" style="padding:7px; background:rgb(255, 230, 0); border-bottom:2px solid #333; margin:0; font-family:sans-serif; font-weight:bold; font-size:110%">
+        PREVIEW
+      </p>
+    {% endif %}
     {% render "header" %}
     {% render "navbar", metadata: site.metadata, resource: resource %}
 
