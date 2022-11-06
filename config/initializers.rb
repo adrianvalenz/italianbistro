@@ -16,7 +16,7 @@ Bridgetown.configure do |config|
   #
   # init :dotenv
   #
-  init :"brigetown-prismic"
+  init :"bridgetown-prismic"
 
   # Uncomment to use Bridgetown SSR (aka dynamic rendering of content via Roda):
   #
