@@ -35,7 +35,7 @@ template_engine: liquid
 
 
 # Prismic config:
-prismic_repository: italianbistro.prismic.io
+prismic_repository: italianbistro
 
 autoload_paths:
   - path: models
