@@ -13,7 +13,6 @@ class RodaApp < Bridgetown::Rack::Roda
 
   route do |r|
     # Load Roda routes in server/routes (and src/_routes via `bridgetown-routes`)
-    Bridgetown::Rack::Routes.start! self
-    # r.bridgetown
+    r.bridgetown
   end
 end
