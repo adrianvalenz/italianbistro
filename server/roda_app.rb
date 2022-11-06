@@ -9,7 +9,7 @@ class RodaApp < Bridgetown::Rack::Roda
   include BridgetownPrismic::Roda::Previews
   # Some Roda configuration is handled in the `config/initializers.rb` file.
   # But you can also add additional Roda configuration here if needed.
-  plugins :bridgetown_ssr
+  plugin :bridgetown_ssr
 
   route do |r|
     # Load Roda routes in server/routes (and src/_routes via `bridgetown-routes`)
