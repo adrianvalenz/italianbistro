@@ -20,6 +20,7 @@ class Homepage < Bridgetown::Model::Base
       permalink       doc["homepage.permalink"]   &.as_text
       page_class      doc["homepage.page_class"]  &.as_text
       main_body       doc["homepage.main_body"]   &.as_html with_links
+
     end
   end
 end
