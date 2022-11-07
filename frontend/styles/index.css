@@ -97,6 +97,13 @@ img {
   padding: 2rem 1rem;
 }
 
+.home-title {
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 .home-content {
   width: 100%;
   max-width: 64rem;

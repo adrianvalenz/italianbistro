@@ -9,7 +9,7 @@ layout: default
   <img src="{{ '/images/panini.jpg' | relative_url }}" alt=""/>
 </section>
 
-<header>
+<header class="home-title">
   {{ data.title }}
 </header>
 
@@ -17,10 +17,7 @@ layout: default
   {{ data.main_body }}
 </main>
 
-<main class="home-slice-content">
+<main class="home-slice-content home-content">
   {{ content }}
 </main>
 
-<section class="sliced-customer-logos">
-  {% render "slices/customer_logos", slice: data.body %}
-</section>
