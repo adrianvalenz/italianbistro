@@ -19,8 +19,7 @@ class Homepage < Bridgetown::Model::Base
       title           doc["homepage.title"]       .as_text
       permalink       doc["homepage.permalink"]   &.as_text
       page_class      doc["homepage.page_class"]  &.as_text
-      content         doc["homepage.main_body"]   &.as_html with_links
-
+      main_body       doc["homepage.main_body"]   &.as_html with_links
     
 =begin
       tiles from: -> {
