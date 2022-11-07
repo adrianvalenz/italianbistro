@@ -1,7 +1,7 @@
 class Page < Bridgetown::Model::Base
   class << self
     def collection_name = :pages
-    def prismic_custom_type = :pages
+    def prismic_custom_type = :page
     def prismic_slug(doc) = doc.slug
     def prismic_url(doc)
       "/#{prismic_slug(doc)}"
