@@ -16,9 +16,9 @@ class Homepage < Bridgetown::Model::Base
       created_at      doc.first_publication_date
 
       layout          :home
-      permalink       doc["homepage.permalink"]   .as_text
-      page_class      doc["homepage.page_class"]  .as_text
       title           doc["homepage.title"]       .as_text
+      permalink       doc["homepage.permalink"]   &.as_text
+      page_class      doc["homepage.page_class"]  &.as_text
       content         doc["homepage.body"]        &.as_html with_links
     end
   end
