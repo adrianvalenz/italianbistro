@@ -20,3 +20,7 @@ layout: default
 <main class="home-slice-content">
   {{ content }}
 </main>
+
+<section class="sliced-customer-logos">
+  {% render "customer_logos", variable_one: site.metadata, variable_two: resource %}
+</section>
