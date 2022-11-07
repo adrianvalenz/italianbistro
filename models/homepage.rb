@@ -4,7 +4,7 @@ class Homepage < Bridgetown::Model::Base
     def prismic_custom_type = :homepage
     def prismic_slug(doc) = doc.slug
     def prismic_url(doc)
-      "/"
+      "/#{prismic_slug(doc)}"
     end
   end
 
