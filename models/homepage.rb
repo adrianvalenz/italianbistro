@@ -19,7 +19,25 @@ class Homepage < Bridgetown::Model::Base
       title           doc["homepage.title"]       .as_text
       permalink       doc["homepage.permalink"]   &.as_text
       page_class      doc["homepage.page_class"]  &.as_text
-      content         doc["homepage.body"]        &.as_html with_links
+      content         doc["homepage.main_body"]   &.as_html with_links
+
+    
+=begin
+      tiles from: -> {
+        doc["homepage.body"].slices.map do |slice|
+          case slice.slice_type
+          when "homepage_tile"
+            slice.repeat.group_documents.map do |tile|
+              provide_data do
+                backdrop      tile["backdrop"]   &.url
+                heading       tile["heading"]    &.as_text
+                description   tile["description"]&.as_html with_links
+              end
+            end
+          end
+        end.flatten.compact
+      }
+=end
     end
   end
 end
