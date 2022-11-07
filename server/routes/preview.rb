@@ -12,11 +12,13 @@ class Routes::Preview < Bridgetown::Rack::Routes
         r.redirect prismic_preview_redirect_url
       end
 
+      r.is "testconfig" do
+        Bridgetown::Current.site.config.prismic_api.inspect
+      end
+
       # Rendering pathway to preview a page
       # route: /preview/:custom_type/:id
       r.is String, String do |custom_type, id|
-        BridgetownPrismic::Builder.new.build # test to see if BT 1.2 issue is fixed
-
         unless prismic_preview_token
           response.status = 403
           next prismic_token_error_msg
