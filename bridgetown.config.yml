@@ -40,3 +40,8 @@ prismic_repository: italianbistro
 autoload_paths:
   - path: models
     eager: true
+
+collections:
+  pages:
+    output: true
+    permalink: /:slug/
